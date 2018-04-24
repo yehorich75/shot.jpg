@@ -1,0 +1,38 @@
+@media screen and (max-width: 360px)
+	.header-container
+		width: 100%
+		display: flex
+		justify-content: space-around
+		flex-direction: column
+		text-transform: uppercase
+		.main-menu
+			flex-direction: column
+			display: none
+			li
+				width: 100%
+				font-size: 12px
+				a
+					padding: 8px
+		.toggle-button
+			text-align: center
+			display: block
+			cursor:
+			color: #000000
+			&:after
+				content: attr(data-open)
+		#menu-checkbox:checked + nav[role="navigation"] .main-menu
+			display: flex
+		#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after
+			content: attr(data-close)
+		a
+			margin-right: -65px
+		.main-menu
+			position: relative
+			top: 30px
+			right: 115px
+
+	main.grid
+		grid-template-rows: 870px 1fr
+
+	.posts
+		grid-template-columns: auto
