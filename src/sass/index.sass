@@ -1,6 +1,7 @@
 // @import style
 
 $color-dark-grey: #414146
+$color-light-grey: rgb(183, 183, 183)
 $color-yellow: #ffea00
 
 *
@@ -8,15 +9,23 @@ $color-yellow: #ffea00
 
 body
 	font-family: 'Open Sans', sans-serif
+	background: url(../img/shot-bg.jpg) no-repeat
+	height: 100%
 
 *
 	padding: 0
 	margin: 0
 
-h2 
-	font-size: 30px
-	text-transform: uppercase
-	font-weight: bold
+.logo
+	margin-left: 50px
+
+.top-slide
+	h2 
+		font-size: 43px
+		font-weight: bold
+		color: #ffffff
+	span
+		color: #81c2ba
 
 li
 	list-style: none
@@ -26,32 +35,63 @@ a
 	text-decoration: none
 
 .grid
-	grid-template-rows: 117px 500px 1fr
+	display: grid
+	grid-template-rows: 130px 500px 1fr
 	grid-template-columns: repeat(12, 1fr)
 	background: url(../img/shot-bg.jpg) no-repeat
 	height: 100%
 
 header
-	padding: 22px 0
 	grid-column: 1 / span 12
-	display: flex
-	justify-content: space-between
+	.header-container
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		height: 130px
+		.header-icons
+			background: rgb(183, 183, 183)
+			margin-right: 50px
+
+#menu-checkbox
+	display: none
 
 .main-menu
 	display: flex
 	justify-content: space-between
-	li 
+	margin-left: 100px
+	margin-right: auto
+	li
+		margin-right: 40px
 		a 
-			color: #454545
+			color: $color-light-grey
 			text-transform: uppercase
-			font-size: 14px
+			font-size: 12px
 			font-weight: 700
+			&:active
+				color: #ffffff
 
 main 
 	grid-column: 2 / span 10
 
 .top-slide
+	padding-top: 140px
+	padding-bottom: 136px
 	h1 
 		font-size: 43px
 		color: #ffffff
+	p
+		color: $color-light-grey
+
+.cards-block
+	grid-column: 1 / span 12
+	margin-bottom: 33px
+	&-container
+		display: flex
+		justify-content: start
+		margin-left: -60px
+	&__img
+		margin-right: 24px
+		img
+			border-radius: 10px
+
 
